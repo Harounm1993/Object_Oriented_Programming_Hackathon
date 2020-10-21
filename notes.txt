@@ -1,0 +1,17 @@
+calculating possible moves
+check adjacent squares
+    if piece in way
+        if piece is opposite team
+            possible move is next square over
+
+if move is made, piece between old and new position removed
+
+PIECE
+Behaviour:
+    Is move possible
+
+isPossibleMove() {
+    piece.currentPosition, compare to new position
+}
+
+square.addEventListener('click', isPossibleMove);
