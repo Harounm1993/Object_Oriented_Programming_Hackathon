@@ -1,0 +1,11 @@
+Check winner - 3 in a row, check outcomes
+    - currentPlayerIndex
+    - playerMoves = [playerOneMoves, playerTwoMoves]
+    - playerMove is a coordinate, range: 0, 0 -> 2, 2
+    - winCheck function
+    - push playerMove to correct array in playerMoves array
+    - filter the current player's playerMoves array, check for x values
+    - filter again, checking for y values
+    - if returned array has a length of 3 = win
+
+    - goes to next person's move
