@@ -10,5 +10,8 @@ let square9 = document.querySelector("#square9")
 
 
 square1.addEventListener("click", () => {
-    square1.innerHTML = "<h2>X</h2>"
-})
+ const move  = prompt("enter your move")
+    square1.innerHTML = `<h2>${move}</h2>`
+}) 
+
+const squares  = document.querySelectorAll
