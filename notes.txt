@@ -15,3 +15,29 @@ isPossibleMove() {
 }
 
 square.addEventListener('click', isPossibleMove);
+
+//next steps#
+
+Functionality
+
+1) adapt MVP to suit checkers game rules
+
+ 8-8 board needed
+ 8 pieces for each player
+ pieces move diagonally/
+ move set// 
+ A) +/-1   -x/1-y axis move if normal/ 
+ B)-/+2    -x/2-y to do double move
+
+
+ 2)Score count- how many pieces left by each player
+                :win condition, when a player reaches 0.
+                checks for winner at the end of each round
+
+
+3) Alter input style from prompt to input button on page
+
+4)canvas work for GUI
+
+
+
