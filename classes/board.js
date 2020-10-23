@@ -1,4 +1,5 @@
 const { Square } = require("./square");
+const { Player } = require("./player");
 
 class Board {
     constructor() {
@@ -11,22 +12,16 @@ class Board {
         this.grid = new Array(3).fill('').map(newRow(3));
     };
 
-    getSquare(arg) {
-        let targetSquare;
-        if (arg === "from") {
-            targetSquare = "A2";//prompt("Which piece do you want to move?");
-        }
-        if (arg === "to") {
-            targetSquare = "B3";//prompt("Where do you want to move to?");
-        }
+    getSquare(targetSquare) {
         const targetSquareRow = this.rowLabels.indexOf(targetSquare.charAt(0).toLowerCase());
         const squareInRow = parseInt(targetSquare.charAt(1));
 
-        console.log(this.grid[targetSquareRow][squareInRow - 1]);
+        return this.grid[targetSquareRow][squareInRow - 1];
     };
 
-    changeSquare(square) {
-        square.changeContent();
+    changeSquare(targetSquare) {
+        const square = this.getSquare(targetSquare);
+        square.changeContent("X");
     };
 
     gridUpdate() {
@@ -41,12 +36,8 @@ class Board {
     };
 };
 
-function move(to) {
-    to.content = 'X';
-}
-
 const board = new Board();
 board.createBoard();
-board.getSquare("to");
+board.changeSquare(Player.getMove());
 
 board.gridUpdate();
