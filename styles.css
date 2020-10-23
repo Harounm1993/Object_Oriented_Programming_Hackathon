@@ -1,0 +1,25 @@
+body{
+
+    background-color: #00bfff;
+    text-align: center;
+}
+
+.board-container {
+display: flex;
+flex-wrap: wrap;
+width: 156px;
+background-color:white;
+margin: auto
+}
+
+.square{
+background-color white;
+border: 1px solid black;
+height: 50px;
+width: 50px;
+}
+
+h1{
+
+    
+}

@@ -40,4 +40,13 @@ Functionality
 4)canvas work for GUI
 
 
+winningMove = []
+
+if any given 3 moves which are pushed into an empty array
+then we would have a check === movesx3 
+so we are always looking for a sequence in the array
+array has a max length of 9- grid size
+which is checking for indexes in the empty array
+then winner is determined 
+
 
