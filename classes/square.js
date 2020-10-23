@@ -6,8 +6,10 @@ class Square {
     changeContent(piece) {
         this.content = piece;
     };
-};
 
-module.exports = {
-    Square
+    drawSquare() {
+        (e) => {
+            e.target.innerHTML = `<h2>${this.content}</h2>`;
+        };
+    };
 };

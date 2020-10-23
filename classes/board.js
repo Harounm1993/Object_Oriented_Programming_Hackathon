@@ -1,5 +1,5 @@
-const { Square } = require("./square");
-const { Player } = require("./player");
+// const { Square } = require("./square");
+// const { Player } = require("./player");
 
 class Board {
     constructor() {
@@ -19,12 +19,13 @@ class Board {
         return this.grid[targetSquareRow][squareInRow - 1];
     };
 
-    changeSquare(targetSquare) {
+    changeSquare(targetSquare, counterType) {
         const square = this.getSquare(targetSquare);
-        square.changeContent("X");
+        square.changeContent(counterType);
     };
 
     gridUpdate() {
+        console.clear();
         this.grid.forEach((r) => {
             let i = 0;
             const squareValues = r.map((square) => {
@@ -34,10 +35,16 @@ class Board {
         console.log(squareValues);
         });
     };
+
+    // drawBoard() {
+    //     const boardContainer = document.querySelector("#board-container");
+    //     boardContainer.innerHTML = '';
+    //     boardContainer.appendChild(addSquare());
+    // };
+    
+    // addSquare() {
+    //     const square = document.createElement("div");
+    //     square.classList.add('square');
+    //     return square;
+    // };
 };
-
-const board = new Board();
-board.createBoard();
-board.changeSquare(Player.getMove());
-
-board.gridUpdate();
